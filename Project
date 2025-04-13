@@ -1,0 +1,30 @@
+The output of a Linear Time Variant System is given as:
+
+           k=n
+y(n) = ∑   x(k) * h_k(n)
+         k=n-L+1
+
+Implement the above sum in MATLAB.
+
+• N = length of the input signal x
+
+• h_k(·) is defined as the kᵗʰ impulse response of the system, i.e., the response to a unit impulse
+  shifted by k samples to the right.
+
+• The matrix N × L matrix H is formed by stacking these h_k(·) such that its kᵗʰ row is the kᵗʰ impulse response.
+
+• Sample input (x_LTV) and time varying impulse response (h_LTV) are provided in Test_vectors.mat file 
+  to you for verification of your code.
+
+API Specification:
+
+1. Function name : LTV_impulse
+
+2. Inputs/Arguments to the function should be: 
+   x (column vector of N × 1 size) 
+   H (matrix of N × L size)
+
+3. Output of the function should be: 
+   y (column vector of (N + L - 1) × 1 size)
+
+4. The function should be callable as: [y] = LTV_impulse(x, H)
